@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+
+/* === DESIGN TOKENS === */
+:root {
+  --white: hsl(0, 0%, 100%);
+  --slate-300: hsl(212, 45%, 89%);
+  --slate-500: hsl(216, 15%, 48%);
+  --slate-900: hsl(218, 44%, 22%);
+}
+
+/* === TAILWIND THEME === */
+@theme {
+    /* colors */
+  --color-bg: var(--slate-300);
+  --color-surface: var(--white);
+  --color-text: var(--slate-900);
+  --color-muted: var(--slate-500);
+
+    /* typography */
+  --font-sans: "Outfit", sans-serif;
+}
+
+/* === BASE === */
+@layer base {
+  body {
+    @apply bg-bg text-text font-sans;
+  }
+}
